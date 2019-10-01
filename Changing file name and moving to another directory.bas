@@ -1,4 +1,4 @@
-Attribute VB_Name = "Module1"
+Attribute VB_Name = "NameChanger"
 'Need to associate each function to a button in Excel
 Sub FetchNames()
 
@@ -30,6 +30,9 @@ Sub RenameFiles()
 Dim myPath As String
 
 myPath = Application.ActiveWorkbook.Path & "\Files to change name\"
+
+'Add here the logic of how you will the new files names will be
+
 r = 10 'row 10 is initial row where the current and new file names are placed
 Do Until IsEmpty(Cells(r, 1)) And IsEmpty(Cells(r, 2))
     Name myPath & Cells(r, 1).Value As myPath & Cells(r, 2).Value 'changing the files names
